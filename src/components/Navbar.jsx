@@ -4,22 +4,32 @@ const Navbar = () => {
     const [active, setActive] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 150){
-                setActive(true);
-            } else {
-                setActive(false);
-            }
-        };
+  let lastScrollY = window.scrollY;
 
-        window.addEventListener("scroll", handleScroll);
-        return () =>{
-            window.removeEventListener("scroll", handleScroll);
-        }
-    }, []);
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > 150) {
+      if (currentScrollY < lastScrollY) {
+        setActive(true);  // Scroll ke ATAS → MUNCULKAN navbar
+      } else {
+        setActive(false); // Scroll ke BAWAH → SEMBUNYIKAN navbar
+      }
+    } else {
+      setActive(true); // Saat dekat atas halaman, tampilkan navbar
+    }
+
+    lastScrollY = currentScrollY;
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
   return (
-    <div className="navbar py-7 flex items-center justify-between">
+    <div  className={`navbar fixed py-2 flex items-center justify-evenly z-50 w-full backdrop-blur-md transition-transform duration-300 ${active ? "translate-y-0" : "-translate-y-full"}`}>
       <div className="logo">
         <h1 className="text-3xl font-bold bg-black p-1 md:bg-transparent md:text-zinc-100">0:00</h1>
       </div>
@@ -53,6 +63,9 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
+      <div>
+          <button>Login</button>
+      </div>
     </div>
   );
 };

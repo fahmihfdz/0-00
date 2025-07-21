@@ -2,11 +2,12 @@ import dataImage from "./data";
 import { listTarot } from "./data";
 import { listProyek } from "./data";
 
+
 function App() {
   return (
     <>
     {/* void */}
-      <div className="void grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
+      {/* <div className="void grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
         <div className="animate__animated animate__fadeInUp animate__delay-2s">
           <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-3 rounded-2xl">
             <img
@@ -45,12 +46,22 @@ function App() {
           alt="Hero Img"
           className="w-[450px] md:ml-auto animate__animated animate__fadeInUp animate__delay-3s" loading="lazy" 
         />
+      </div> */}
+
+      <div className="relative w-full h-screen">
+        <img src={dataImage.HeroImage} alt="" className="w-full h-full object-cover"/>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center mb-40">
+        <h1 className="mt-32 font-bold text-2xl">SEORANG MANUSIA YANG KEBETULAN HIDUP</h1>
+        </div>
       </div>
+
+      
     {/* void */}
 
       {/* senandika */}
-      <div className="senandika mt-32 py-10" id="senandika">
-        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg" data-aos="fade-up" data-aos-duration= "1000">
+      <div className="senandika py-10 bg-black" id="senandika">
+        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg mt-32" data-aos="fade-up" data-aos-duration= "1000">
           <img src={dataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:hidden block" loading="lazy"/>
           <p className="text-base/loose mb-10">
             Saat segalanya kembali ke nol, di situlah aku mendengar diriku yang
@@ -104,8 +115,8 @@ function App() {
       {/* senandika */}
 
       {/* ekspresi */}
-      <div className="ekspressi mt-32 py-10" id="ekspresi">
-        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration= "1000">Jejak Tanpa Peta</h1>
+      <div className="ekspressi py-10 bg-black" id="ekspresi">
+        <h1 className="text-center mt-32 text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration= "1000">Jejak Tanpa Peta</h1>
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration= "1000" data-aos-delay="300">Di ruang ini, kata-kata bebas tumbuh tanpa peta. Ia bukan sekadar untaian huruf, melainkan cermin dari gejolak batin, lintasan sunyi, dan bisikan jiwa yang enggan dibungkam.</p>
         <div className="ekspressi-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
             
@@ -133,8 +144,8 @@ function App() {
       {/* ekspresi */}
 
       {/* ruang */}
-      <div className="ruang mt-32 sm:p-10 p-0" id="ruang">
-        <h1 className="text-4xl font-bold text-center mb-2" data-aos="fade-up" data-aos-duration= "1000">Ruang Interaksi</h1>
+      <div className="ruang  bg-black sm:p-10 p-0" id="ruang">
+        <h1 className="text-4xl font-bold text-center mb-2 mt-32" data-aos="fade-up" data-aos-duration= "1000">Ruang Interaksi</h1>
         <p className="text-base/loose text-center mb-10 opacity-50" data-aos="fade-up" data-aos-duration= "1000" data-aos-delay="300">Hubungi Saya</p>
         <form action="https://formsubmit.co/fahmihfdzb@gmail.com" method="POST" className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md" autoComplete="off" data-aos="fade-up" data-aos-duration= "1000" data-aos-delay="500">
           <div className="flex flex-col gap-6">

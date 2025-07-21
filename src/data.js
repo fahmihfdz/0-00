@@ -1,7 +1,7 @@
-import HeroImage from "/assets/hero-img.png";
+import HeroImage from "/assets/bg-void.png";
 
 const Image = {
-  HeroImage,
+  HeroImage: "/assets/bg-void.png"
 };
 
 export default Image;
