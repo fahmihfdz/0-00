@@ -52,7 +52,7 @@ function App() {
         <img src={dataImage.HeroImage} alt="" className="w-full h-full object-cover"/>
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <div className="absolute inset-0 z-20 flex flex-col justify-center items-center mb-40">
-        <h1 className="mt-32 font-bold text-2xl">SEORANG MANUSIA YANG KEBETULAN HIDUP</h1>
+        <h1 className="mt-32 font-bold text-2xl text-center">SEORANG MANUSIA YANG KEBETULAN HIDUP</h1>
         </div>
       </div>
 
