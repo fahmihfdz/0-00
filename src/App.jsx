@@ -2,11 +2,10 @@ import dataImage from "./data";
 import { listTarot } from "./data";
 import { listProyek } from "./data";
 
-
 function App() {
   return (
     <>
-    {/* void */}
+      {/* void */}
       {/* <div className="void grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
         <div className="animate__animated animate__fadeInUp animate__delay-2s">
           <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-3 rounded-2xl">
@@ -49,66 +48,111 @@ function App() {
       </div> */}
 
       <div className="relative w-full h-screen">
-        <img src={dataImage.HeroImage} alt="" className="w-full h-full object-cover"/>
+        <img
+          src={dataImage.HeroImage}
+          alt=""
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <div className="absolute inset-0 z-20 flex flex-col justify-center items-center mb-40">
-        <h1 className="mt-32 font-bold text-2xl text-center">SEORANG MANUSIA YANG KEBETULAN HIDUP</h1>
+          <h1 className="mt-32 font-bold text-2xl text-center">
+            SEORANG MANUSIA YANG KEBETULAN HIDUP
+          </h1>
         </div>
       </div>
 
-      
-    {/* void */}
+      {/* void */}
 
       {/* senandika */}
       <div className="senandika py-10 bg-black" id="senandika">
-        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg mt-32" data-aos="fade-up" data-aos-duration= "1000">
-          <img src={dataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:hidden block" loading="lazy"/>
-          <p className="text-base/loose mb-10">
-            Saat segalanya kembali ke nol, di situlah aku mendengar diriku yang
-            paling jelas. Fragmen Diri bukan tentang siapa aku sepenuhnya, tapi
-            tentang potongan-potongan kecil yang pernah jatuh, atau sengaja
-            kusimpan.Karena pada akhirnya, kita semua hanya teka-teki yang ingin
-            diselesaikan, meski belum selesai sepenuhnya.
-          </p>
-          <div className="flex items-center justify-between">
+        <div
+          className="max-w-3xl mx-auto px-4 sm:px-6"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div className="bg-zinc-800 p-7 rounded-lg mt-32">
             <img
               src={dataImage.HeroImage}
               alt="Image"
-              className="w-12 rounded-md sm:block hidden" loading="lazy"
+              className="w-12 rounded-md sm:hidden block"
+              loading="lazy"
             />
-            <div className="flex items-center gap-6">
-              <div className="">
-                <h1 className="text-4xl mb-1">
-                  13 <span className="text-amber-600">≈</span>
-                </h1>
-                <p>Satu ruang </p>
-              </div>
-              <div>
-                <h1 className="text-4xl mb-1">
-                  1 <span className="text-amber-600">≈</span>
-                </h1>
-                <p>Ribuan Makna</p>
+            <p className="text-base/loose mb-10">
+              Saat segalanya kembali ke nol, di situlah aku mendengar diriku
+              yang paling jelas. Fragmen Diri bukan tentang siapa aku
+              sepenuhnya, tapi tentang potongan-potongan kecil yang pernah
+              jatuh, atau sengaja kusimpan.Karena pada akhirnya, kita semua
+              hanya teka-teki yang ingin diselesaikan, meski belum selesai
+              sepenuhnya.
+            </p>
+            <div className="flex items-center justify-between">
+              <img
+                src={dataImage.HeroImage}
+                alt="Image"
+                className="w-12 rounded-md sm:block hidden"
+                loading="lazy"
+              />
+              <div className="flex items-center gap-6">
+                <div className="">
+                  <h1 className="text-4xl mb-1">
+                    13 <span className="text-amber-600">≈</span>
+                  </h1>
+                  <p>Satu ruang </p>
+                </div>
+                <div>
+                  <h1 className="text-4xl mb-1">
+                    1 <span className="text-amber-600">≈</span>
+                  </h1>
+                  <p>Ribuan Makna</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <div className="tarot mt-32">
-          <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration= "1000">Arkana Jiwa & Kata</h1>
-          <p className="lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/normal opacity-50" data-aos="fade-up" data-aos-duration= "1000" data-aos-delay= "300">Sebuah seni untuk merenungi perjalanan hidup bukan melalui kepastian, tapi lewat rasa, tafsir, dan imajinasi, mereka hadir bukan sebagai jawaban.</p>
-          <div className="tarot-box mt-4 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-
-            {/* loop tarot */}
-            {listTarot.map(tarot => (
-            <div className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group" key={tarot.id} data-aos="fade-up" data-aos-duration= "1000" data-aos-delay={tarot.dad}>
-              <img src={tarot.gambar} alt="Tarot Image" className="w-14 bg-zinc-800 p-1 group-hover:bg-zinc-900" loading="lazy"/>
-              <div>
-                <h4 className="font-bold">{tarot.nama}</h4>
-                <p className="opacity-50">{tarot.ket}</p>
-              </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="tarot-box mt-6 grid gap-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2"></div>
+            <h1
+              className="text-4xl/snug font-bold mb-4"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Arkana Jiwa & Kata
+            </h1>
+            <p
+              className="lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/normal opacity-50"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
+              Sebuah seni untuk merenungi perjalanan hidup bukan melalui
+              kepastian, tapi lewat rasa, tafsir, dan imajinasi, mereka hadir
+              bukan sebagai jawaban.
+            </p>
+            <div className="tarot-box mt-4 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+              {/* loop tarot */}
+              {listTarot.map((tarot) => (
+                <div
+                  className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group"
+                  key={tarot.id}
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay={tarot.dad}
+                >
+                  <img
+                    src={tarot.gambar}
+                    alt="Tarot Image"
+                    className="w-14 bg-zinc-800 p-1 group-hover:bg-zinc-900"
+                    loading="lazy"
+                  />
+                  <div>
+                    <h4 className="font-bold">{tarot.nama}</h4>
+                    <p className="opacity-50">{tarot.ket}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            ))}
-
           </div>
         </div>
       </div>
@@ -116,53 +160,138 @@ function App() {
 
       {/* ekspresi */}
       <div className="ekspressi py-10 bg-black" id="ekspresi">
-        <h1 className="text-center mt-32 text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration= "1000">Jejak Tanpa Peta</h1>
-        <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration= "1000" data-aos-delay="300">Di ruang ini, kata-kata bebas tumbuh tanpa peta. Ia bukan sekadar untaian huruf, melainkan cermin dari gejolak batin, lintasan sunyi, dan bisikan jiwa yang enggan dibungkam.</p>
-        <div className="ekspressi-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-            
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="ekspressi-box mt-14 grid gap-6 lg:grid-cols-3 sm:grid-cols-2"></div>
+          <h1
+            className="text-center mt-32 text-4xl font-bold mb-2"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Jejak Tanpa Peta
+          </h1>
+          <p
+            className="text-base/loose text-center opacity-50"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            Di ruang ini, kata-kata bebas tumbuh tanpa peta. Ia bukan sekadar
+            untaian huruf, melainkan cermin dari gejolak batin, lintasan sunyi,
+            dan bisikan jiwa yang enggan dibungkam.
+          </p>
+          <div className="ekspressi-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
             {/* loop ekspresi */}
-            {listProyek.map(proyek => (
-              <div key={proyek.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration= "1000" data-aos-delay={proyek.dad}>
-                <img src={proyek.gambar} alt="proyek img" className="" loading="lazy"/>
+            {listProyek.map((proyek) => (
+              <div
+                key={proyek.id}
+                className="p-4 bg-zinc-800 rounded-md"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={proyek.dad}
+              >
+                <img
+                  src={proyek.gambar}
+                  alt="proyek img"
+                  className=""
+                  loading="lazy"
+                />
                 <div>
                   <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
                   <p className="text-base/loose mb-4">{proyek.desk}</p>
                   <div className="flex flex-wrap gap-2 opacity-70">
                     {proyek.tools.map((tool, index) => (
-                      <p className="py-1 px-3 border border-zinc-500 rounded-md font-semibold" key={index}>{tool}</p>
+                      <p
+                        className="py-1 px-3 border border-zinc-500 rounded-md font-semibold"
+                        key={index}
+                      >
+                        {tool}
+                      </p>
                     ))}
                   </div>
                   <div className="mt-8 text-center">
-                    <a className="bg-transparent border border-amber-600 text-amber-600 p-2 rounded-lg block hover:bg-amber-600 hover:text-white transition" href="#">{proyek.btn}</a>
+                    <a
+                      className="bg-transparent border border-amber-600 text-amber-600 p-2 rounded-lg block hover:bg-amber-600 hover:text-white transition"
+                      href="#"
+                    >
+                      {proyek.btn}
+                    </a>
                   </div>
                 </div>
               </div>
             ))}
-
+          </div>
         </div>
       </div>
       {/* ekspresi */}
 
       {/* ruang */}
       <div className="ruang  bg-black sm:p-10 p-0" id="ruang">
-        <h1 className="text-4xl font-bold text-center mb-2 mt-32" data-aos="fade-up" data-aos-duration= "1000">Ruang Interaksi</h1>
-        <p className="text-base/loose text-center mb-10 opacity-50" data-aos="fade-up" data-aos-duration= "1000" data-aos-delay="300">Hubungi Saya</p>
-        <form action="https://formsubmit.co/fahmihfdzb@gmail.com" method="POST" className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md" autoComplete="off" data-aos="fade-up" data-aos-duration= "1000" data-aos-delay="500">
+        <h1
+          className="text-4xl font-bold text-center mb-2 mt-32"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          Ruang Interaksi
+        </h1>
+        <p
+          className="text-base/loose text-center mb-10 opacity-50"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+        >
+          Hubungi Saya
+        </p>
+        <form
+          action="https://formsubmit.co/fahmihfdzb@gmail.com"
+          method="POST"
+          className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md"
+          autoComplete="off"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="500"
+        >
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <label className="font-semibold">Nama Legkap</label>
-              <input type="text" name="nama" placeholder="Masukan Nama..." className="border border-zinc-500 p-2 rounded-md" required />
+              <input
+                type="text"
+                name="nama"
+                placeholder="Masukan Nama..."
+                className="border border-zinc-500 p-2 rounded-md"
+                required
+              />
             </div>
             <div className="flex flex-col gap-2">
               <label className="font-semibold">Email</label>
-              <input type="email" name="email" placeholder="Masukan Email..." className="border border-zinc-500 p-2 rounded-md" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Masukan Email..."
+                className="border border-zinc-500 p-2 rounded-md"
+                required
+              />
             </div>
             <div className="flex flex-col gap-2">
-              <label htmlFor="bisik" className="font-semibold">Bisik</label>
-              <textarea name="pesan" id="bisik" cols="45" rows="7" placeholder="Biarkan Terdengar..." className="border border-zinc-500 p-2 rounded-md" required></textarea>
+              <label htmlFor="bisik" className="font-semibold">
+                Bisik
+              </label>
+              <textarea
+                name="pesan"
+                id="bisik"
+                cols="45"
+                rows="7"
+                placeholder="Biarkan Terdengar..."
+                className="border border-zinc-500 p-2 rounded-md"
+                required
+              ></textarea>
             </div>
             <div className="text-center">
-              <button type="submit" className="bg-amber-600 text-white p-2 rounded-lg hover:bg-amber-700 transition cursor-pointer w-full">Tinggalkan</button>
+              <button
+                type="submit"
+                className="bg-amber-600 text-white p-2 rounded-lg hover:bg-amber-700 transition cursor-pointer w-full"
+              >
+                Tinggalkan
+              </button>
             </div>
           </div>
         </form>
